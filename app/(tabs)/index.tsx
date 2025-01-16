@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import PageSkeleton from "@/lib/components/PageSkeleton";
+import { Text } from "react-native";
 
 export default function Index() {
    return (
-      <View>
-         <Text>Home</Text>
-      </View>
+      <PageSkeleton>
+         <Text className="text-white">Todos</Text>
+      </PageSkeleton>
    );
 }

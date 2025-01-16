@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import PageSkeleton from "@/lib/components/PageSkeleton";
+import { Text } from "react-native";
 
-export default function done() {
+export default function Done() {
    return (
-      <View>
-         <Text>Done</Text>
-      </View>
+      <PageSkeleton>
+         <Text className="text-white">Done</Text>
+      </PageSkeleton>
    );
 }
