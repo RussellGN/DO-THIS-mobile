@@ -12,13 +12,12 @@ export default function Index() {
     <PageSkeleton>
       <TodoSearch />
 
-      <ScrollView showsVerticalScrollIndicator={false} className="py-4 px-2">
-        <FlatList
-          data={todos}
-          renderItem={({ item }) => <Todo todo={item} />}
-          keyExtractor={(item) => item.id}
-        />
-      </ScrollView>
+      <FlatList
+        className="py-4 px-2"
+        data={todos}
+        renderItem={({ item }) => <Todo todo={item} />}
+        keyExtractor={(item) => item.id}
+      />
 
       <TodoForm />
     </PageSkeleton>
