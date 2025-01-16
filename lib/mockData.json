@@ -1,0 +1,182 @@
+[
+  {
+    "id": "fdcc0a89-eb37-4773-a32b-b894f61bff4d",
+    "content": "Buy groceries for the week.",
+    "date": "12/1/2024",
+    "done": true
+  },
+  {
+    "id": "0039b118-93e8-44ff-9f81-eb7b8db9c271",
+    "content": "Prepare presentation slides for Monday's meeting.",
+    "date": "12/7/2024",
+    "done": false
+  },
+  {
+    "id": "009f61c9-70f1-4323-91a9-f3f848d20372",
+    "content": "Schedule a dentist appointment.",
+    "date": "12/6/2024",
+    "done": true
+  },
+  {
+    "id": "799429f3-ff29-4051-ae89-63f9208b3fea",
+    "content": "Pick up dry cleaning.",
+    "date": "8/13/2024",
+    "done": false
+  },
+  {
+    "id": "0870e693-5ee0-4261-b444-382dd5f49dab",
+    "content": "Renew car insurance online.",
+    "date": "3/3/2024",
+    "done": true
+  },
+  {
+    "id": "305de192-47a6-4b7e-bca6-1ceacd2cd022",
+    "content": "Write a blog post about React Native.",
+    "date": "12/30/2024",
+    "done": true
+  },
+  {
+    "id": "8e68c135-4360-490b-b857-d9428c3ce8ee",
+    "content": "Plan itinerary for family vacation.",
+    "date": "3/25/2024",
+    "done": false
+  },
+  {
+    "id": "65e2098b-ba70-4539-86cb-f8a1936621af",
+    "content": "Call plumber to fix the kitchen sink.",
+    "date": "10/18/2024",
+    "done": false
+  },
+  {
+    "id": "728dc15d-672e-43fc-a5dc-c6fe77ab814b",
+    "content": "Submit project proposal to the client.",
+    "date": "9/1/2024",
+    "done": true
+  },
+  {
+    "id": "a51bf387-5a93-4382-be42-c9a127e10f50",
+    "content": "Clean the garage.",
+    "date": "4/10/2024",
+    "done": true
+  },
+  {
+    "id": "5686cb45-e0e2-495b-b116-408008aea69d",
+    "content": "Read chapter 5 of the Computer Graphics textbook.",
+    "date": "1/24/2024",
+    "done": true
+  },
+  {
+    "id": "057590d1-76c5-44d4-a97b-7a027bce44f3",
+    "content": "Book a flight for business trip.",
+    "date": "8/3/2024",
+    "done": false
+  },
+  {
+    "id": "03d01d3d-9b50-4c6a-9a14-05fc3a352ad9",
+    "content": "Organize files on desktop.",
+    "date": "3/12/2024",
+    "done": false
+  },
+  {
+    "id": "3ad73774-e6fa-42a7-8157-7eca5e8e665f",
+    "content": "Pay electricity bill.",
+    "date": "10/9/2024",
+    "done": true
+  },
+  {
+    "id": "e4cd8347-737e-4283-8034-45ad85a604c9",
+    "content": "Prepare notes for the HCE 302 exam.",
+    "date": "5/27/2024",
+    "done": true
+  },
+  {
+    "id": "50eca3f2-be76-4054-9c6d-9932e156a6aa",
+    "content": "Water the garden plants.",
+    "date": "5/25/2024",
+    "done": true
+  },
+  {
+    "id": "b87c6c25-f41f-45d9-b3e4-d980f7181270",
+    "content": "Buy birthday gift for Sarah.",
+    "date": "2/22/2024",
+    "done": true
+  },
+  {
+    "id": "8345a13d-9371-45db-8b02-2b209593aa8c",
+    "content": "Update LinkedIn profile with recent achievements.",
+    "date": "11/24/2024",
+    "done": false
+  },
+  {
+    "id": "e009cce8-8b9f-4918-8e01-b071b2058788",
+    "content": "Send out invitations for the wedding.",
+    "date": "6/22/2024",
+    "done": true
+  },
+  {
+    "id": "ba51e233-0fd6-4f8f-8678-6daa6cbccfc5",
+    "content": "Review the latest software development trends.",
+    "date": "9/10/2024",
+    "done": false
+  },
+  {
+    "id": "9eb23c47-2f5b-44ea-9d23-f13706f19e2c",
+    "content": "Finalize plans for the New Year's Eve party.",
+    "date": "4/22/2024",
+    "done": false
+  },
+  {
+    "id": "2e357658-1328-465b-b28d-3fa0944c5645",
+    "content": "Backup important files to the cloud.",
+    "date": "10/31/2024",
+    "done": true
+  },
+  {
+    "id": "4462217e-b94c-4c66-a0c6-ab352d680e9d",
+    "content": "Research on trading strategies.",
+    "date": "3/4/2024",
+    "done": true
+  },
+  {
+    "id": "c8276b19-64e3-4e07-8a1e-aadf9c610169",
+    "content": "Fix bugs in the Java backend application.",
+    "date": "9/28/2024",
+    "done": true
+  },
+  {
+    "id": "196b8ce7-893c-4d08-bfdc-fdbdc0713c9e",
+    "content": "Read 'Java Persistence with Hibernate' before the next project meeting.",
+    "date": "9/2/2024",
+    "done": true
+  },
+  {
+    "id": "b457851a-999e-47f3-9403-f1bd7f02f1cd",
+    "content": "Create a checklist for the moving process.",
+    "date": "7/19/2024",
+    "done": false
+  },
+  {
+    "id": "76a38490-9ddc-4a62-a8ac-2f08c399d88d",
+    "content": "Review last quarter's trading performance.",
+    "date": "9/22/2024",
+    "done": true
+  },
+  {
+    "id": "8006e9c1-4430-4a7b-8165-358959013ed4",
+    "content": "Clean up the codebase before submission.",
+    "date": "3/10/2024",
+    "done": true
+  },
+  {
+    "id": "dda3143f-69f9-47a5-bb3f-a96b0a3e2d2b",
+    "content": "Plan meals for the upcoming week.",
+    "date": "4/18/2024",
+    "done": true
+  },
+  {
+    "id": "63024fec-16b7-45ba-a58e-f2e0a123a758",
+    "content": "Update the client on project progress.",
+    "date": "8/12/2024",
+    "done": false
+  }
+]
