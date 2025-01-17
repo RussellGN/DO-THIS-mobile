@@ -1,12 +1,14 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
 import { Todo } from "../types";
+import { usePathname } from "expo-router";
 
 export default function useTodos() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const route = usePathname();
 
   async function loadTodosAsync() {
     setIsLoading(true);
@@ -40,7 +42,7 @@ export default function useTodos() {
       });
   }
 
-  useEffect(loadTodos, []);
+  useEffect(loadTodos, [route]);
 
   return { todos, isLoading, error, isRefreshing, refresh, setIsRefreshing, loadTodos };
 }
