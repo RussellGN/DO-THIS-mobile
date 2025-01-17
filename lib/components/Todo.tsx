@@ -3,6 +3,7 @@ import { type Todo as TodoType } from "../types";
 import { MaterialIcons } from "@expo/vector-icons";
 import { iconSize, theme } from "../constants";
 import useUpdateTodo from "../hooks/useUpdateTodo";
+import useDeleteTodo from "../hooks/useDeleteTodo";
 
 type propTypes = {
   todo: TodoType;
@@ -11,7 +12,8 @@ type propTypes = {
 };
 
 export default function Todo({ todo, todos, reloadTodos }: propTypes) {
-  const { isLoading, updateTodo } = useUpdateTodo(todos, reloadTodos);
+  const { isLoading: isUpdating, updateTodo } = useUpdateTodo(todos, reloadTodos);
+  const { isLoading: isDeleting, deleteTodo } = useDeleteTodo(todos, reloadTodos);
 
   return (
     <View className="mb-3">
@@ -21,25 +23,25 @@ export default function Todo({ todo, todos, reloadTodos }: propTypes) {
       >
         <Text className="flex-grow flex-shrink text-white pr-3">{todo.content}</Text>
 
-        <TouchableOpacity disabled={isLoading}>
+        <TouchableOpacity disabled={isUpdating || isDeleting} onPress={() => deleteTodo(todo.id)}>
           <MaterialIcons
             name="delete-outline"
             color={theme.pallete.danger}
             size={iconSize / 1.6}
-            style={{ opacity: isLoading ? 0.5 : 1 }}
+            style={{ opacity: isUpdating || isDeleting ? 0.5 : 1 }}
           />
         </TouchableOpacity>
 
         {!todo.done && (
           <TouchableOpacity
-            disabled={isLoading}
+            disabled={isUpdating || isDeleting}
             onPress={() => updateTodo({ ...todo, done: true })}
           >
             <MaterialIcons
               name="check-circle-outline"
               color={theme.pallete.success}
               size={iconSize / 1.6}
-              style={{ opacity: isLoading ? 0.5 : 1 }}
+              style={{ opacity: isUpdating || isDeleting ? 0.5 : 1 }}
             />
           </TouchableOpacity>
         )}
