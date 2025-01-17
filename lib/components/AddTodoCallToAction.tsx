@@ -1,5 +1,5 @@
 import { TouchableOpacity, Dimensions } from "react-native";
-import { iconSize, theme } from "../constants";
+import { ICON_SIZE, THEME } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function AddTodoCallToAction() {
@@ -7,9 +7,9 @@ export default function AddTodoCallToAction() {
   return (
     <TouchableOpacity
       style={{
-        width: iconSize * 1.7,
-        height: iconSize * 1.7,
-        backgroundColor: theme.pallete.primary,
+        width: ICON_SIZE * 1.7,
+        height: ICON_SIZE * 1.7,
+        backgroundColor: THEME.pallete.primary,
         borderRadius: "100%",
         position: "fixed",
         top: height * 0.8,
@@ -17,7 +17,7 @@ export default function AddTodoCallToAction() {
       }}
       className="shadow-lg flex items-center justify-center"
     >
-      <MaterialIcons size={iconSize} color="white" name="add" />
+      <MaterialIcons size={ICON_SIZE} color="white" name="add" />
     </TouchableOpacity>
   );
 }

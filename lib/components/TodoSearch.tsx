@@ -1,5 +1,5 @@
 import { View, TextInput } from "react-native";
-import { iconSize } from "../constants";
+import { ICON_SIZE } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function TodoSearch() {
@@ -14,7 +14,7 @@ export default function TodoSearch() {
           placeholderTextColor="rgb(218, 218, 218)"
           className="text-white text-white fs-4 shadow-none outline-0 border-0"
         />
-        <MaterialIcons name="search" size={iconSize - 2} color="rgb(218, 218, 218)" />
+        <MaterialIcons name="search" size={ICON_SIZE - 2} color="rgb(218, 218, 218)" />
       </View>
     </View>
   );

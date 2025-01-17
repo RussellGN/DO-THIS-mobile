@@ -1,5 +1,5 @@
 import TabsHeader from "@/lib/components/TabsHeader";
-import { theme, darkStyles, iconSize } from "@/lib/constants";
+import { THEME, DARK_STYLES, ICON_SIZE } from "@/lib/constants";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { Text } from "react-native";
@@ -10,11 +10,11 @@ export default function TabsLayout() {
       screenOptions={{
         header: ({ route }) => <TabsHeader route={route.name === "index" ? "Todos" : route.name} />,
         tabBarStyle: {
-          ...darkStyles.container,
+          ...DARK_STYLES.container,
           height: 60,
         },
         tabBarLabel: ({ focused, children }) => (
-          <Text style={{ color: focused ? theme.pallete.primary : "gray", marginTop: 4 }}>
+          <Text style={{ color: focused ? THEME.pallete.primary : "gray", marginTop: 4 }}>
             {children}
           </Text>
         ),
@@ -27,8 +27,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ focused }) => (
             <MaterialIcons
               name="home"
-              color={focused ? theme.pallete.primary : "gray"}
-              size={iconSize}
+              color={focused ? THEME.pallete.primary : "gray"}
+              size={ICON_SIZE}
             />
           ),
         }}
@@ -40,8 +40,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ focused }) => (
             <MaterialIcons
               name="done"
-              color={focused ? theme.pallete.primary : "gray"}
-              size={iconSize}
+              color={focused ? THEME.pallete.primary : "gray"}
+              size={ICON_SIZE}
             />
           ),
         }}

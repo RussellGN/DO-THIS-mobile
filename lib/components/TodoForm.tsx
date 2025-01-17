@@ -1,5 +1,5 @@
 import { View, TextInput, TouchableOpacity } from "react-native";
-import { iconSize, theme } from "../constants";
+import { ICON_SIZE, THEME } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
 import useNewTodo from "../hooks/useNewTodo";
 import { Todo } from "../types";
@@ -39,14 +39,14 @@ export default function TodoForm({ todos, reloadTodos }: propTypes) {
           disabled={isInputFocused || isLoading}
           onPress={() => inputRef.current?.focus()}
           style={{
-            backgroundColor: theme.pallete.primary,
+            backgroundColor: THEME.pallete.primary,
             borderEndStartRadius: 12,
             opacity: isInputFocused ? 0.5 : 1,
           }}
           className="p-2"
         >
           <MaterialIcons
-            size={iconSize}
+            size={ICON_SIZE}
             color="white"
             name={isLoading ? "hourglass-bottom" : "add"}
           />

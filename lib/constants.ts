@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
+import * as Application from "expo-application";
 
-export const theme = {
+export const THEME = {
   pallete: {
     primary: "rgb(26, 132, 146)",
     secondary: "rgb(37, 102, 142)",
@@ -14,11 +15,17 @@ export const theme = {
   },
 };
 
-export const darkStyles = StyleSheet.create({
+export const DARK_STYLES = StyleSheet.create({
   container: {
-    backgroundColor: theme.pallete.dark[100],
+    backgroundColor: THEME.pallete.dark[100],
     color: "white",
   },
 });
 
-export const iconSize = 32;
+export const ICON_SIZE = 32;
+
+export const APP_VERSION = Application.nativeBuildVersion;
+
+export const APP_NAME = Application.applicationName;
+
+export const GITHUB_REPO = "https://github.com/RussellGN/DO-THIS-mobile";

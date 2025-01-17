@@ -1,7 +1,7 @@
 import { Text, FlatList, RefreshControl, ActivityIndicator } from "react-native";
 import { type Todo as TodoType } from "../types";
 import { MaterialIcons } from "@expo/vector-icons";
-import { iconSize, theme } from "../constants";
+import { ICON_SIZE, THEME } from "../constants";
 import { truncate } from "lodash";
 import Todo from "./Todo";
 
@@ -34,10 +34,10 @@ export default function TodoList({
       refreshControl={<RefreshControl refreshing={isRefreshing} onRefresh={refresh} />}
       ListEmptyComponent={() =>
         isLoading ? (
-          <ActivityIndicator size="large" color={theme.pallete.primary} />
+          <ActivityIndicator size="large" color={THEME.pallete.primary} />
         ) : error ? (
           <Text className="text-[#a9a9a9] text-center p-10">
-            <MaterialIcons name="warning" color={theme.pallete.danger} size={iconSize} />
+            <MaterialIcons name="warning" color={THEME.pallete.danger} size={ICON_SIZE} />
             {"\n"}
             Error encountered fetching todos: {truncate(error, { length: 200 })}
           </Text>
