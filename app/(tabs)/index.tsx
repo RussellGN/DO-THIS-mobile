@@ -7,6 +7,7 @@ import { filterTodos } from "@/lib/utils";
 
 export default function Index() {
   const { todos, isLoading, error, isRefreshing, refresh, loadTodos: reloadTodos } = useTodos();
+
   const mappableTodos = filterTodos(todos, { done: false });
 
   return (
