@@ -2,10 +2,18 @@ import { View, TextInput, TouchableOpacity } from "react-native";
 import { iconSize, theme } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
 import useNewTodo from "../hooks/useNewTodo";
+import { Todo } from "../types";
 
-export default function TodoForm({ reloadTodos }: { reloadTodos: () => void }) {
-  const { createTodo, isLoading, inputRef, isInputFocused, setIsInputFocused } =
-    useNewTodo(reloadTodos);
+type propTypes = {
+  todos: Todo[];
+  reloadTodos: () => void;
+};
+
+export default function TodoForm({ todos, reloadTodos }: propTypes) {
+  const { createTodo, isLoading, inputRef, isInputFocused, setIsInputFocused } = useNewTodo(
+    todos,
+    reloadTodos
+  );
 
   return (
     <View className="px-0.5">

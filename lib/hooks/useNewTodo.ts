@@ -1,15 +1,13 @@
-import useTodos from "./useTodos";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRef, useState } from "react";
 import { Alert, TextInput } from "react-native";
 import { generateId } from "../utils";
 import { Todo } from "../types";
 
-export default function useNewTodo(reloadTodos: () => void) {
+export default function useNewTodo(todos: Todo[], reloadTodos: () => void) {
   const [isLoading, setIsLoading] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const inputRef = useRef<TextInput | null>(null);
-  const { todos } = useTodos();
 
   function createTodo(content: string) {
     setIsLoading(true);
