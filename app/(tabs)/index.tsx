@@ -3,13 +3,13 @@ import useTodos from "@/lib/hooks/useTodos";
 import TodoForm from "@/lib/components/TodoForm";
 import TodoSearch from "@/lib/components/TodoSearch";
 import PageSkeleton from "@/lib/components/PageSkeleton";
-import { ActivityIndicator, FlatList, Text } from "react-native";
+import { ActivityIndicator, FlatList, RefreshControl, Text } from "react-native";
 import { iconSize, theme } from "@/lib/constants";
 import { MaterialIcons } from "@expo/vector-icons";
 import { truncate } from "lodash";
 
 export default function Index() {
-  const { todos, isLoading, error, loadTodos: reloadTodos } = useTodos();
+  const { todos, isLoading, error, isRefreshing, refresh, loadTodos: reloadTodos } = useTodos();
 
   return (
     <PageSkeleton>
@@ -20,6 +20,8 @@ export default function Index() {
         data={todos}
         renderItem={({ item }) => <Todo todo={item} todos={todos} reloadTodos={reloadTodos} />}
         keyExtractor={(item) => item.id}
+        refreshing={isRefreshing}
+        refreshControl={<RefreshControl refreshing={isRefreshing} onRefresh={refresh} />}
         ListEmptyComponent={() =>
           isLoading ? (
             <ActivityIndicator size="large" color={theme.pallete.primary} />
