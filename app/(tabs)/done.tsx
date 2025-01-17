@@ -1,19 +1,13 @@
 import PageSkeleton from "@/lib/components/PageSkeleton";
-import Todo from "@/lib/components/Todo";
+import TodoList from "@/lib/components/TodoList";
 import useTodos from "@/lib/hooks/useTodos";
-import { FlatList, Text } from "react-native";
 
 export default function Done() {
-  const { todos } = useTodos();
+  const { todos, error, isLoading, isRefreshing, refresh, loadTodos: reloadTodos } = useTodos();
 
   return (
     <PageSkeleton>
-      <FlatList
-        className="py-4 px-2"
-        data={todos}
-        renderItem={({ item }) => <Todo todo={item} />}
-        keyExtractor={(item) => item.id}
-      />
+      <TodoList {...{ todos, isLoading, error, isRefreshing, refresh, reloadTodos }} />
     </PageSkeleton>
   );
 }
