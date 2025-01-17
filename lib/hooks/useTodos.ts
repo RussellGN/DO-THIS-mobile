@@ -1,7 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
 import { Todo } from "../types";
-import { Alert } from "react-native";
 
 export default function useTodos() {
   const [isLoading, setIsLoading] = useState(false);
