@@ -1,41 +1,41 @@
 {
-   "expo": {
-      "name": "do-this",
-      "slug": "do-this",
-      "version": "1.0.0",
-      "orientation": "portrait",
-      "icon": "./assets/images/icon.png",
-      "scheme": "myapp",
-      "userInterfaceStyle": "automatic",
-      "newArchEnabled": true,
-      "ios": {
-         "supportsTablet": true
-      },
-      "android": {
-         "adaptiveIcon": {
-            "foregroundImage": "./assets/images/adaptive-icon.png",
-            "backgroundColor": "#ffffff"
-         }
-      },
-      "web": {
-         "bundler": "metro",
-         "output": "static",
-         "favicon": "./assets/images/favicon.png"
-      },
-      "plugins": [
-         "expo-router",
-         [
-            "expo-splash-screen",
-            {
-               "image": "./assets/images/splash-icon.png",
-               "imageWidth": 200,
-               "resizeMode": "contain",
-               "backgroundColor": "#ffffff"
-            }
-         ]
-      ],
-      "experiments": {
-         "typedRoutes": true
+  "expo": {
+    "name": "Do This",
+    "slug": "do-this",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/custom.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/custom.png",
+        "backgroundColor": "#e9f1f9"
       }
-   }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/custom.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/custom.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#e9f1f9"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
 }
