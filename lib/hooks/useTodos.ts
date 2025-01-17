@@ -7,7 +7,7 @@ export default function useTodos() {
   const [error, setError] = useState<string | undefined>();
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  useEffect(() => {
+  function loadTodos() {
     setIsLoading(true);
     setError(undefined);
 
@@ -21,7 +21,9 @@ export default function useTodos() {
         setError(reason);
         setIsLoading(false);
       });
-  }, []);
+  }
 
-  return { todos, isLoading, error };
+  useEffect(loadTodos, []);
+
+  return { todos, isLoading, error, loadTodos };
 }
