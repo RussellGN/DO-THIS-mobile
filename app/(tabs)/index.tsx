@@ -1,16 +1,16 @@
-import PageSkeleton from "@/lib/components/PageSkeleton";
 import Todo from "@/lib/components/Todo";
+import useTodos from "@/lib/hooks/useTodos";
 import TodoForm from "@/lib/components/TodoForm";
 import TodoSearch from "@/lib/components/TodoSearch";
+import PageSkeleton from "@/lib/components/PageSkeleton";
+import { ActivityIndicator, FlatList, Text } from "react-native";
 import { iconSize, theme } from "@/lib/constants";
-import useTodos from "@/lib/hooks/useTodos";
 import { MaterialIcons } from "@expo/vector-icons";
 import { truncate } from "lodash";
-import { ActivityIndicator, FlatList, ScrollView, Text, View } from "react-native";
 
 export default function Index() {
-  const { todos, isLoading, error } = useTodos();
-  console.log(error);
+  const { todos, isLoading, error, loadTodos: reloadTodos } = useTodos();
+
   return (
     <PageSkeleton>
       <TodoSearch />
@@ -35,7 +35,7 @@ export default function Index() {
         }
       />
 
-      <TodoForm />
+      <TodoForm reloadTodos={reloadTodos} />
     </PageSkeleton>
   );
 }

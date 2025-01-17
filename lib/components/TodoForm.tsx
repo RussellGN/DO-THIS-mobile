@@ -1,8 +1,12 @@
 import { View, TextInput, TouchableOpacity } from "react-native";
 import { iconSize, theme } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
+import useNewTodo from "../hooks/useNewTodo";
 
-export default function TodoForm() {
+export default function TodoForm({ reloadTodos }: { reloadTodos: () => void }) {
+  const { createTodo, isLoading, inputRef, isInputFocused, setIsInputFocused } =
+    useNewTodo(reloadTodos);
+
   return (
     <View className="px-0.5">
       <View
@@ -14,19 +18,30 @@ export default function TodoForm() {
         }}
       >
         <TextInput
+          ref={inputRef}
+          onSubmitEditing={isLoading ? undefined : (e) => createTodo(e.nativeEvent.text)}
+          onFocus={() => setIsInputFocused(true)}
+          onBlur={() => setIsInputFocused(false)}
           placeholder="New todo (click to type)"
           placeholderTextColor="rgb(218, 218, 218)"
-          className="text-white py-1 px-4 flex-grow text-white fs-4 shadow-none outline-0 border-0"
+          className="py-1 px-4 flex-grow text-white fs-4 shadow-none outline-0 border-0"
         />
 
         <TouchableOpacity
+          disabled={isInputFocused || isLoading}
+          onPress={() => inputRef.current?.focus()}
           style={{
             backgroundColor: theme.pallete.primary,
             borderEndStartRadius: 12,
+            opacity: isInputFocused ? 0.5 : 1,
           }}
           className="p-2"
         >
-          <MaterialIcons size={iconSize} color="white" name="add" />
+          <MaterialIcons
+            size={iconSize}
+            color="white"
+            name={isLoading ? "hourglass-bottom" : "add"}
+          />
         </TouchableOpacity>
       </View>
     </View>
