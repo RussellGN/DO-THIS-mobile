@@ -19,7 +19,7 @@ export default function Todo({ todo, todos, reloadTodos }: propTypes) {
     <View className="mb-3">
       <View
         style={{ borderRadius: 5, backgroundColor: THEME.pallete.dark[200] }}
-        className="p-2 flex shadow-md flex-row justify-between items-start gap-2"
+        className="px-3 py-2 flex shadow-md flex-row justify-between items-start gap-3"
       >
         <Text className="flex-grow flex-shrink text-white pr-3">{todo.content}</Text>
 
@@ -27,7 +27,7 @@ export default function Todo({ todo, todos, reloadTodos }: propTypes) {
           <MaterialIcons
             name="delete-outline"
             color={THEME.pallete.danger}
-            size={ICON_SIZE / 1.6}
+            size={ICON_SIZE / 1.4}
             style={{ opacity: isUpdating || isDeleting ? 0.5 : 1 }}
           />
         </TouchableOpacity>
@@ -40,7 +40,7 @@ export default function Todo({ todo, todos, reloadTodos }: propTypes) {
             <MaterialIcons
               name="check-circle-outline"
               color={THEME.pallete.success}
-              size={ICON_SIZE / 1.6}
+              size={ICON_SIZE / 1.4}
               style={{ opacity: isUpdating || isDeleting ? 0.5 : 1 }}
             />
           </TouchableOpacity>

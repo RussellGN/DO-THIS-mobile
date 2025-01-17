@@ -12,7 +12,7 @@ export default function TodoSearch() {
         <TextInput
           placeholder="Search todos.."
           placeholderTextColor="rgb(218, 218, 218)"
-          className="text-white text-white fs-4 shadow-none outline-0 border-0"
+          className="text-white fs-4 shadow-none outline-0 border-0"
         />
         <MaterialIcons name="search" size={ICON_SIZE - 2} color="rgb(218, 218, 218)" />
       </View>
