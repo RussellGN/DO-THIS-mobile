@@ -7,6 +7,7 @@ import Todo from "./Todo";
 
 type propTypes = {
   todos: TodoType[];
+  mappableTodos?: TodoType[];
   error: string | undefined;
   isLoading: boolean;
   isRefreshing: boolean;
@@ -16,6 +17,7 @@ type propTypes = {
 
 export default function TodoList({
   todos,
+  mappableTodos,
   isLoading,
   error,
   isRefreshing,
@@ -25,7 +27,7 @@ export default function TodoList({
   return (
     <FlatList
       className="py-4 px-2"
-      data={todos}
+      data={mappableTodos || todos}
       renderItem={({ item }) => <Todo todo={item} todos={todos} reloadTodos={reloadTodos} />}
       keyExtractor={(item) => item.id}
       refreshing={isRefreshing}
