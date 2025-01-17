@@ -12,6 +12,10 @@ export default function TabsLayout() {
         tabBarStyle: {
           ...DARK_STYLES.container,
           height: 60,
+
+          elevation: 0, // Removes shadow on Android
+          borderTopWidth: 0, // Removes the top border
+          shadowOpacity: 0, // Removes shadow on iOS
         },
         tabBarLabel: ({ focused, children }) => (
           <Text style={{ color: focused ? THEME.pallete.primary : "gray", marginTop: 4 }}>
