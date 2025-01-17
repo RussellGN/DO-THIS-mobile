@@ -22,6 +22,7 @@ export default function useNewTodo(todos: Todo[], reloadTodos: () => void) {
     AsyncStorage.setItem("todos", JSON.stringify([...todos, newTodo]))
       .then(() => {
         reloadTodos();
+        inputRef.current?.clear();
         setIsLoading(false);
       })
       .catch((reason) => {
