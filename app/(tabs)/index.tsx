@@ -18,7 +18,7 @@ export default function Index() {
       <FlatList
         className="py-4 px-2"
         data={todos}
-        renderItem={({ item }) => <Todo todo={item} />}
+        renderItem={({ item }) => <Todo todo={item} todos={todos} reloadTodos={reloadTodos} />}
         keyExtractor={(item) => item.id}
         ListEmptyComponent={() =>
           isLoading ? (
@@ -35,7 +35,7 @@ export default function Index() {
         }
       />
 
-      <TodoForm reloadTodos={reloadTodos} />
+      <TodoForm todos={todos} reloadTodos={reloadTodos} />
     </PageSkeleton>
   );
 }
