@@ -10,7 +10,8 @@ export function filterTodos(todos: Todo[], filter: Filter) {
     const filterBy = (key: FilterKeys) => Object.keys(filter).includes(key);
 
     if (filterBy("done")) inc = inc && todo.done === filter.done;
-    if (filterBy("query")) inc = inc && todo.content.includes(filter.query!);
+    if (filterBy("query"))
+      inc = inc && todo.content.toLowerCase().includes(filter.query!.toLowerCase());
     if (filterBy("startDate")) inc = inc && new Date(todo.date) >= new Date(filter.startDate!);
     if (filterBy("endDate")) inc = inc && new Date(todo.date) <= new Date(filter.endDate!);
 
