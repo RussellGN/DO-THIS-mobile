@@ -14,7 +14,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/Done.png",
-        "backgroundColor": "#fff"
+        "backgroundColor": "#175d84"
       },
       "package": "com.russellgn.dothis"
     },
@@ -31,7 +31,7 @@
           "image": "./assets/images/Done.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#fff"
+          "backgroundColor": "#175d84"
         }
       ]
     ],
