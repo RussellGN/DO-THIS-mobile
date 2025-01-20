@@ -4,6 +4,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { ICON_SIZE, THEME } from "../constants";
 import { truncate } from "lodash";
 import Todo from "./Todo";
+import { usePathname } from "expo-router";
 
 type propTypes = {
   todos: TodoType[];
@@ -24,6 +25,8 @@ export default function TodoList({
   refresh,
   reloadTodos,
 }: propTypes) {
+  const pathname = usePathname();
+
   return (
     <FlatList
       className="py-4 px-2"
@@ -42,7 +45,9 @@ export default function TodoList({
             Error encountered fetching todos: {truncate(error, { length: 200 })}
           </Text>
         ) : (
-          <Text className="text-[#a9a9a9] text-center p-10">No todos found, lets add some!</Text>
+          <Text className="text-[#a9a9a9] text-center p-10">
+            {pathname.includes("done") ? "0 done!" : "No todos found, lets add some!"}
+          </Text>
         )
       }
     />
