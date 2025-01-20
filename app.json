@@ -4,7 +4,7 @@
     "slug": "do-this",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/custom.png",
+    "icon": "./assets/images/Done.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,29 +13,39 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/custom.png",
-        "backgroundColor": "#e9f1f9"
-      }
+        "foregroundImage": "./assets/images/Done.png",
+        "backgroundColor": "#fff"
+      },
+      "package": "com.russellgn.dothis"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/custom.png"
+      "favicon": "./assets/images/Done.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/custom.png",
+          "image": "./assets/images/Done.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#e9f1f9"
+          "backgroundColor": "#fff"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f739ab76-f528-4ead-a660-8a31d830835d"
+      }
+    },
+    "owner": "russellgn"
   }
 }
